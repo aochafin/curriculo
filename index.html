@@ -163,7 +163,7 @@ a {
     width: 0;
     background: #0f0;
     box-shadow: 0 0 15px #0f0;
-    animation: loadingFill 0.8s linear forwards;
+    animation: loadingFill 0.3s linear forwards;
 }
 
 /* animação da barra */
@@ -453,7 +453,7 @@ function showScreen(name, skipLoading) {
         loadingFill.style.animation = "none";
         void loadingFill.offsetWidth; // força reflow
         loadingFill.style.animation = "";
-        loadingFill.style.animation = "loadingFill 0.8s linear forwards";
+        loadingFill.style.animation = "loadingFill 0.3s linear forwards";
 
         loadingOverlay.style.display = "flex";
 
@@ -461,7 +461,7 @@ function showScreen(name, skipLoading) {
             screen.innerHTML = screens[name] || '';
             currentScreen = name;
             loadingOverlay.style.display = "none";
-        }, 850);
+        }, 350);
     } else {
         screen.innerHTML = screens[name] || '';
         currentScreen = name;
@@ -526,3 +526,4 @@ showScreen('menu', true);
 </script>
 </body>
 </html>
+
